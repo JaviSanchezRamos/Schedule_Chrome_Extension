@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
   
   chrome.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === "checkTasks") {
-      chrome.storage.local.get("tasks", (data) => {
+      chrome.storage.sync.get("tasks", (data) => {
         const tasks = data.tasks || [];
         const todayStr = new Date().toISOString().slice(0, 10);
         tasks.forEach((task) => {
