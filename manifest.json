@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "MiniAgenda",
+    "version": "1.0",
+    "description": "Agenda personal amb calendari, notes i tasques.",
+    "permissions": ["storage", "notifications", "alarms"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "icons": {
+      "128": "icon.png"
+    },
+    "background": {
+  "service_worker": "background.js"
+}
+  }
+  

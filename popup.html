@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniAgenda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab-button" data-tab="calendar">📅 Calendari</button>
+    <button class="tab-button" data-tab="notes">📝 Notes</button>
+    <button class="tab-button" data-tab="tasks">✅ Tasques</button>
+  </div>
+
+  <div class="tab-content" id="calendar" style="display: none;">
+    <h2>Calendari</h2>
+
+    <div id="calendarControls" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <button id="prevMonth">« Mes anterior</button>
+        <h3 id="monthYearTitle"></h3>
+        <button id="nextMonth">Mes següent »</button>
+      </div>
+      <div id="calendarGrid"></div>
+
+    <div id="calendarGrid"></div>
+    <div id="dayNote" style="margin-top:10px; display:none;">
+      <h3 id="selectedDateTitle"></h3>
+      <textarea id="dayNoteText" rows="4" placeholder="Nota pel dia..."></textarea>
+      <button id="saveDayNote">Desar nota</button>
+      <p id="savedDayNoteMsg"></p>
+    </div>
+  </div>
+  
+
+  <div class="tab-content" id="notes" style="display: none;">
+  <h2>Notes</h2>
+
+  <button id="newNoteBtn">🆕 Nova nota</button>
+
+  <ul id="notesList"></ul> <!-- Aquí mostramos la lista de notas -->
+
+  <input type="text" id="noteTitleInput" placeholder="Títol de la nota" style="width: 100%; margin-top: 10px;"/>
+  <textarea id="noteContentInput" rows="6" placeholder="Escriu la teva nota..." style="width: 100%; margin-top: 5px;"></textarea>
+
+  <button id="saveNoteBtn">💾 Desa nota</button>
+  <button id="deleteNoteBtn" style="background-color: #e74c3c; color: white; margin-left: 10px;">🗑️ Elimina nota</button>
+
+  <div id="savedNotesMsg"></div>
+</div>
+
+  <div class="tab-content" id="tasks" style="display: none;">
+    <h2>Llista de tasques</h2>
+    <input id="taskInput" type="text" placeholder="Nova tasca..." />
+    <input id="taskDeadline" type="date" />
+    <button id="addTask">Afegir</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  
+  <div style="margin-top: 20px;">
+    <hr />
+    <h3>📦 Exportar / Importar</h3>
+    <button id="exportData">Exportar .json</button>
+    <input type="file" id="importData" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

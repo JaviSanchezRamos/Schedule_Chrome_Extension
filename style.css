@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 300px;
+    padding: 16px;
+    background-color: #fdfdfd;
+    color: #333;
+    border-radius: 12px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 8px 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-button:hover,
+  .tab-button.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  #taskList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  #taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    font-size: 14px;
+  }
+  
+  #taskList li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  #calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-top: 12px;
+  }
+  
+  .calendar-day {
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f4f8;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .calendar-day:hover {
+    background-color: #e0eaff;
+  }
+  
+  .calendar-day.has-note {
+    background-color: #ffd966; /* amarillo suave */
+    font-weight: bold;
+    border: 2px solid #f1c232;
+  }
